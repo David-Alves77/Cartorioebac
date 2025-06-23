@@ -111,7 +111,10 @@ int main()
 		system("pause");
 	}
 	
-	for(laco=1;laco=1;)//para repetir blocos de código
+	 //para repetir blocos de código
+	do {
+		printf("Executando uma vez\n");
+	} while (0);
 	{ 
 		
 		setlocale(LC_ALL, "Portuguese");//definido a linguagem
@@ -121,12 +124,13 @@ int main()
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n\n");
+		printf("\t4 - Sair do sistema\n\n");
 		printf("opção: ");//final do menu
 		
-		scanf("%d", &opcao); //armazenamnto a escolha do usuário
+		//armazenamnto a escolha do usuário
 		
 		system("cls");//responsável por limpar a tela
-		
+
 		switch(opcao)//inicio da seleção do menu
 		{
 			case 1:
@@ -140,6 +144,11 @@ int main()
 			case 3:
 			deletar();//chamada de funções
 			break;//pro "case" funciona como um pause
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema!\n");
+			return 0;
+			break;
 			
 			default:
 			printf("essa opção não está disponivel!\n");
